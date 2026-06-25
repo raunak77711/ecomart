@@ -10,6 +10,11 @@ EcoMart is a modern e-commerce platform designed to encourage sustainable shoppi
 
 The project focuses on creating an engaging user experience while spreading awareness about sustainable consumer choices.
 
+## 🌐 Live Demo
+
+Experience EcoMart here:
+👉 https://raunak77711.github.io/ecomart/
+
 ## ✨ Features
 
 * Responsive and modern design
