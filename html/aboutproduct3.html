@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floral Napkins (4pc) | EcoMart</title>
+  
+  <!-- CSS Path -->
+  <link rel="stylesheet" href="../css/productstyle.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <style>
+/* CSS TO DISPLAY PRODUCT INFO IN JUSTIFIED WAY*/
+/* =========================================
+   1. GLOBAL STYLES & FONTS
+   ========================================= */
+body {
+  background-color: #0d1a12; /* Deep Dark Green Body */
+  color: #e8f5e8; 
+  margin: 0; 
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Force Poppins on all elements */
+h1, h2, h3, h4, p, button, a, span, li {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.navbar {
+  background-color: #061a13;
+  padding: 24px 0;
+  border-bottom: 1px solid #1f4035;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+/* Logo */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9ccc65;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo-box img {
+  height: 42px;
+}
+
+/* Center Links */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+
+.nav-center a {
+  position: relative;
+  color: #dcefe4;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+
+/* NAV HOVER EFFECT */
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #9ccc65;
+  transition: width 0.3s ease;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+  width: 100%;
+}
+
+.nav-center a:hover {
+  color: #9ccc65;
+  transform:scale(1.1);
+}
+
+/* Icons */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-icons a {
+  color: #dcefe4;
+  font-size: 20px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-icons a:hover {
+  color: #9ccc65;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  background: #e67e22;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+
+.products-hero {
+  background-color: #0d1a12; /* Deep Dark Green */
+  width: 100%;
+  margin: 0;
+  padding: 90px 20px;
+  text-align: center;
+
+}
+
+.products-hero h1 {
+  font-size: 52px;
+  color: #a8d5ba;  /* Pale Green (Matches Blog) */
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.products-hero p {
+  color: #c7d2c9; /* Light Grey-Green (Matches Blog) */
+  font-size: 18px;
+  margin: 0;
+}
+.products-hero .container {
+  background-color: transparent !important;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+.products-section {
+  padding: 60px 20px 120px;
+  background: #0d1a12;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+/* Card Style */
+.product-card {
+  background: #1e3a2f; /* Dark Green Card Background */
+  border: 1px solid #2d5a3d;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border-color: #9ccc65;
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.card-content {
+  padding: 30px;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  color: #fff; /* White Text */
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.card-content p {
+  color: #c7d2c9; /* Light Grey Text */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Pricing */
+.prices {
+  margin-bottom: 25px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #7d9688;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.new-price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #9ccc65; /* Bright Green Price */
+}
+
+/* Badges & Buttons */
+.sale-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #e67e22; /* Orange Badge */
+  color: white;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.add-btn {
+  width: 100%;
+  background: #2d5a3d;
+  color: #a8d5ba;
+  border: 1px solid #4a7c59;
+  padding: 14px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add-btn:hover {
+  background: #9ccc65;
+  color: #0b1f17;
+}
+/* =========================================
+   6. SCROLL TO TOP BUTTON
+   ========================================= */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  background-color: #9ccc65;
+  color: #061a13;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#myBtn:hover {
+  background-color: #a8d5ba;
+}
+    .product-detail-page { background-image:url(../assets/high-angle-shot-beautiful-tropical-jungle-full-trees.jpg);; width: 100%; margin: 0; padding: 80px 0; color: #333; }
+    .product-layout { max-width: 1100px; margin: 0 auto; display: flex; gap: 50px; align-items: flex-start; padding: 0 20px; }
+    .product-image-column { flex: 1; }
+    .main-product-image { width: 100%; border-radius: 12px; display: block; }
+    .product-info-column { flex: 1;padding:30px; background-color:#061a13; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .product-info-column h1 { margin-top: 0; font-size: 40px; color: white; }
+    .price-row { margin-bottom: 20px; font-size: 22.4px; }
+    .current-price { font-weight: 700; color: #2e7d32; }
+    .original-price { text-decoration: line-through; color: #888; margin: 0 10px; font-size: 17.2px; }
+    .discount-badge { background: #e8f5e9; color: #2e7d32; padding: 4px 8px; font-size: 15.2px; border-radius: 4px; }
+    .purchase-section { margin-top: 30px; display: flex; flex-direction: column; gap: 20px; }
+    .quantity-controls { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+    .qty-btn { width: 35px; height: 35px; border: 1px solid #ccc; background: #fff; cursor: pointer; border-radius: 4px; font-size: 19.2px; }
+    #qty { width: 50px; height: 35px; text-align: center; border: 1px solid #ccc; border-radius: 4px; }
+    .add-to-cart-button { background-color: #2e7d32; color: white; border: none; padding: 15px 30px; font-size: 17.6px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+    .add-to-cart-button:hover { background-color: #1b5e20; }
+    /* FOOTER */
+   .footer {
+      background: #0d1a12;
+      color: #c7d2c9;
+      padding: 64px 5% 32px;
+      text-align: center;
+      border-top: 1px solid #2d5a3d;
+    }
+
+    .footer p {
+      font-size: 16px;
+      opacity: 0.85;
+    }
+   
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo-box">
+      <img src="../assets/logo.png" alt="EcoMart Logo">
+      <span><a href="../index.html" style="text-decoration: none; color:#9ccc65;">EcoMart</a></span>
+    </div>
+    <nav class="nav-center">
+      <a href="../index.html">Home</a>
+      <a href="./productpage.html" class="active">Products</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./research.html">Research</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+<!-- BUTTON THAT NAVIGATE BACK TO PRODUCT PAGE-->
+<button onclick="window.location.href='productpage.html';" style="padding:3px;border:none;position:absolute;top: 120px;left:200px;cursor: pointer;background-color:#061a13;color:white;;font-size:16px;font-family:'Poppins',sans-serif;transform: scale(1.1);border-radius: 5px;cursor:pointer;"><b>⬅️ Back To Previous Page</b></button>
+
+
+<main class="product-detail-page">
+  <div class="container product-layout">
+    <div class="product-image-column">
+      <img src="../assets/product3.jpeg" alt="Floral Napkins" class="main-product-image">
+    </div>
+    <div class="product-info-column">
+      <h1>Floral Napkins (Set of 4)</h1>
+      <div class="price-row">
+        <span class="current-price">Rs. 1,500</span>
+        <span class="original-price">Rs. 2,450</span>
+        <span class="discount-badge">10% OFF</span>
+      </div>
+      <div style="color:white;">
+        <p>Reusable luxury cotton napkins with beautiful Nepali-inspired floral block print — elegant and sustainable.</p>
+      </div>
+      <div style="color:white;">
+        <ul>
+          <li>100% soft, absorbent cotton</li>
+          <li>Set of 4 matching pieces</li>
+          <li>Machine washable (cold/gentle cycle)</li>
+          <li>Size: approx. 45 × 45 cm each</li>
+          <li>Handcrafted with traditional block printing in Nepal</li>
+        </ul>
+      </div>
+      <div class="purchase-section">
+        <div class="quantity-wrapper">
+          <label for="qty" style="color:white;">Quantity:</label>
+          <div class="quantity-controls">
+            <button type="button" class="qty-btn minus" onclick="changeQuantity(-1)">−</button>
+            <input type="number" id="qty" value="1" min="1" max="20" readonly>
+            <button type="button" class="qty-btn plus" onclick="changeQuantity(1)">+</button>
+          </div>
+        </div>
+        <button class="add-to-cart-button" onclick="addToCart()">
+          Add to Cart • <span id="total-display">Rs. 1,500</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <p>©️ 2026 EcoMart. All rights reserved. Crafted with love for a greener Nepal 🌿</p>
+  </footer>
+<script>
+let quantity = 1;
+const price = 1500;
+const qtyInput = document.getElementById('qty');
+const totalDisplay = document.getElementById('total-display');
+
+function changeQuantity(delta) {
+  quantity = Math.max(1, Math.min(20, quantity + delta));
+  qtyInput.value = quantity;
+  updateTotal();
+}
+
+function updateTotal() {
+  const total = quantity * price;
+  totalDisplay.textContent = `Rs. ${total.toLocaleString()}`;
+}
+
+function addToCart() {
+  alert(`Added ${quantity} x Floral Napkins to cart!`);
+}
+
+updateTotal();
+</script>
+</body>
+</html>

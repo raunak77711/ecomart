@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Raunak">
+  <title>EcoMart | Sustainable Shopping</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS (Moved to css folder) -->
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <!-- Favicon (Moved to assets folder) -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Internal CSS (coursework requirement) -->
+  <style>
+    h2 {
+      color: #9ccc65;
+    }
+     .products-hero {
+      text-align: center;
+      padding: 50px 20px;
+     
+    }
+
+    .products-hero h1 {
+      color: #f1fff8;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .products-hero p {
+      color: #9ccc65;
+      font-size: 18px;
+    }
+
+    /*  Layout */
+    .products-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    /* Card Design */
+    .product-card {
+      background-color: #102a21;
+      border: 1px solid #1f4035;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px); /* Simple hover effect */
+      border-color: #9ccc65;
+    }
+
+    /* Images */
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* Text Content */
+    .product-card h3 {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #b7e4c7;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      height: 80px; /* Keeps cards even height */
+      overflow: hidden;
+    }
+
+    /* Price & Button */
+    .price-box {
+      margin-bottom: 15px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #666;
+      margin-right: 10px;
+    }
+
+    .new-price {
+      color: #9ccc65;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      background-color: #3a6b5c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .add-btn:hover {
+      background-color: #9ccc65;
+      color: #0b1f17;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <!-- LOGO (Path updated to assets/) -->
+      <div class="logo-box">
+        <img src="./assets/logo.png" alt="EcoMart Logo">
+        <span>EcoMart</span>
+      </div>
+
+      <!-- CENTER NAVIGATION (HTML files stay in root, so these links don't change) -->
+      <nav class="nav-center">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./html/productpage.html">Products</a>
+        <a href="./html/blog.html">Blog</a>
+        <a href="./html/research.html">Research</a>
+        <a href="./html/about.html">About Us</a>
+        <a href="./html/contact.html">Contact</a>
+        <div class="auth-links">
+          <a href="login.html" class="login-btn" target="_blank">Login</a>
+          <a href="signup.html" class="signup-btn" target="_blank">Sign up</a>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+
+      <p class="badge">🌱 Sustainable • Ethical • Natural</p>
+
+      <h1>
+        Shop Sustainably,<br>
+        <span>Live Consciously</span>
+      </h1>
+
+      <p class="hero-para">
+        EcoMart is a sustainable e-commerce platform designed to promote
+        conscious consumerism. We provide eco-friendly products that reduce
+        environmental impact while supporting ethical trade.
+      </p>
+
+      <p class="hero-para">
+        Our products are made using bamboo, hemp, recycled fabrics, and other
+        biodegradable materials sourced responsibly from local artisans.
+      </p>
+
+      <p class="hero-para">
+        By choosing EcoMart, you actively contribute to protecting nature,
+        reducing waste, and building a greeneer future.
+      </p>
+
+      <!-- Inline CSS example -->
+       <a href="./html/productpage.html" style="text-decoration: none;color:inherit;">
+      <button style="background-color:#9ccc65;color:#0b1f17;padding:15px 32px;border:none;font-size:16px;font-family:'Poppins',sans-serif;opacity: 0.7;cursor:pointer;">
+        Explore Sustainable Products
+      </button>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="promise">
+      <h2>Our Featured Products</h2>
+    <section class="products-container">
+    <a href="./html/productpage.html" style="text-decoration: none;color:inherit;">
+    <div class="product-card">
+      <img src="./assets/product1.jpeg" alt="Tote Bag">
+      <h3>Organic Cotton Tote</h3>
+      <p>Spacious and sturdy tote bag made from 100% certified organic cotton. Grown without chemicals, soft to touch, and fully biodegradable. Perfect for daily essentials.</p>
+      <div class="price-box">
+        <span class="old-price">Rs. 1,500</span>
+        <span class="new-price">Rs. 1,200</span>
+      </div>
+      <button class="add-btn" onclick="">Add to Cart</button>
+    </div>
+  </a>
+  
+
+     <a href="./html/productpage.html" style="text-decoration: none;color:inherit;">
+    <div class="product-card">
+
+      <img src="./assets/product2.jpeg" alt="Bamboo Cutlery">
+      <h3>Bamboo Cutlery Set</h3>
+      <p>Portable 4-piece set (fork, knife, spoon, chopsticks) with a cotton pouch. 100% natural bamboo — lightweight, strong, and perfect for travel or lunch.</p>
+      <div class="price-box">
+        <span class="old-price">Rs. 1,000</span>
+        <span class="new-price">Rs. 850</span>
+      </div>
+      <button class="add-btn" onclick="">Add to Cart</button>
+    </div>
+  </a>
+
+    <!-- 3. Napkins -->
+     <a href="/html/productpage.html" style="text-decoration: none;color:inherit;">
+    <div class="product-card">
+    
+      <img src="assets/product3.jpeg" alt="Floral Napkins">
+      <h3>Floral Napkins (4pc)</h3>
+      <p>Reusable 100% cotton napkins with a pretty floral print. Soft, absorbent, and machine washable. Ditch paper napkins and go eco-friendly today.</p>
+      <div class="price-box">
+        <span class="old-price">Rs. 1,500</span>
+        <span class="new-price">Rs. 1,050</span>
+      </div>
+      <button class="add-btn" onclick="">Add to Cart</button>
+    </div>
+  </a>
+ </section>
+
+  
+   <section class="promise">
+    <h2>Our features</h2>
+
+    <div class="promise-box">
+      <div class="promise-item">
+        <h3>Free <br/> Shipping</h3>
+      
+        <img src="assets/freshipping.png" alt="Free Shipping" width="150px" height="150px">
+      </div>
+
+      <div class="promise-item">
+        <h3>24x7 Customer Support</h3>
+        
+        <img src="assets/24x7.png" alt="Customer Support" width="150px" height="150px">
+      </div>
+
+      <div class="promise-item">
+        <h3>100% Natural Products</h3>
+   
+        <img src="assets/natural.png" alt="Natural Products" width="150px" height="150px">
+      </div>
+       <div class="promise-item">
+        <h3> Tree Plant Per Purchase</h3>
+        <img src="assets/treeplant.png" alt="Tree Plant" width="150px" height="150px">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE SECTION -->
+  <section class="promise">
+    <h2>Our Promise To Nature</h2>
+
+    <div class="promise-box">
+      <div class="promise-item">
+        🌍
+        <h3>Planet First</h3>
+        <p>Environmental protection guides every decision we make.</p>
+      </div>
+
+      <div class="promise-item">
+        ♻️
+        <h3>Low Waste</h3>
+        <p>Designed to reduce waste and promote reuse.</p>
+      </div>
+
+      <div class="promise-item">
+        🤝
+        <h3>Ethical Trade</h3>
+        <p>Supporting artisans through fair trade practices.</p>
+      </div>
+    </div>
+  </section>
+  
+
+<footer class="footer">
+    <p>&copy; 2026 EcoMart. All rights reserved. Crafted with love for a greener Nepal 🌿</p>
+  </footer>
+
+
+</body>
+</html>

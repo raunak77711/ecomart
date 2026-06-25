@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="author" content="Prinsha">
+    <title>About Us - EcoMart</title>
+    
+    <!-- INTERNAL CSS -->
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #147654;
+    background-image: url('../assets/high-angle-shot-beautiful-tropical-jungle-full-trees.jpg');
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #061a13;
+    padding: 24px 0;
+    border-bottom: 1px solid #1f4035;
+    
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  /* LOGO */
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #9ccc65;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .logo-box img {
+    height: 42px;
+  }
+
+  /* CENTER NAV */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+  }
+  
+  .nav-center a {
+    position: relative;
+    color: #dcefe4;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 6px;
+  }
+  
+  /* NAV HOVER EFFECT */
+  .nav-center a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #9ccc65;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-center a:hover::after,
+  .nav-center a.active::after {
+    width: 100%;
+  }
+  
+  .nav-center a:hover {
+    color: #9ccc65;
+    transform: scale(1.1);
+  }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.about-header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #1b3a2f;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.green-text {
+    color: white;
+}
+
+.tagline {
+    font-size: 22.4px;
+    color: white;
+    font-weight: 500;
+}
+
+/* Section Styles */
+.about-section, .team-section, .values-section {
+    background-color: #1b3a2f;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 35.2px;
+    color: white;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #1b3a2f;
+    display: inline-block;
+}
+
+.about-section p {
+    text-align: center;
+    font-size: 17.2px;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.8;
+}
+
+/* Team Section */
+.team-description {
+    font-size: 17.6px;
+    color: white;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 25px 20px;
+    border-radius: 10px;
+    background-color: rgb(78, 117, 100);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin-bottom: 20px;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(39, 174, 96, 0.15);
+    border-color: #11241d;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #1b3a2f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: left;
+}
+
+.member-photo:hover {
+    transform: scale(1.05);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+
+.view-bio-btn {
+    display: inline-block; /* Changed from default inline */
+    background-color: #1b3a2f;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15.2px;
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+}
+
+.view-bio-btn:hover {
+    background-color: #1b3a2f;
+    transform: scale(1.05);
+    opacity: 0.7;
+    color: white; /* Keep text white on hover */
+}
+
+/* Values Section */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.value-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: rgb(78, 117, 100);
+    transition: all 0.3s ease;
+    border-color: #147654;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(39, 174, 96, 0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #1b3a2f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 28.8px;
+}
+
+.value-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20.8px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: white;
+    font-size: 15.2px;
+    line-height: 1.6;
+}
+
+/* Footer */
+ .footer {
+      background: #0d1a12;
+      color: #c7d2c9;
+      padding: 64px 5% 32px;
+      text-align: center;
+      border-top: 1px solid #2d5a3d;
+    }
+
+    .footer p {
+      font-size: 16px;
+      opacity: 0.85;
+    }
+    /* Feedback Form Styles */
+ .feedback-section {
+            max-width: 700px;
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary-green);
+        }
+
+        .feedback-section h2 { color: var(--dark-green); margin-bottom: 20px; text-align: center; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #1b3a2f;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus { border-color: var(--primary-green); outline: 1px seagreen; }
+
+        .btn-submit {
+            background: var(--dark-green);
+            color: #13741b;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .btn-submit:hover { transform: scale(1.02); background: var(--primary-green); }
+    </style>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+
+ <!-- NAVBAR -->
+ <header class="navbar">
+    <div class="nav-container">
+
+      <!-- LOGO -->
+      <div class="logo-box">
+        <img src="../assets/logo.png" alt="EcoMart Logo">
+        <span>EcoMart</span>
+      </div>
+
+      <!-- CENTER NAVIGATION -->
+      <nav class="nav-center">
+        <a href="../index.html" >Home</a>
+        <a href="./productpage.html">Products</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./research.html">Research</a>
+        <a href="./about.html" class="active">About Us</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+ 
+    <div class="container">
+        
+        <header class="about-header">
+            <h1>About <span class="green-text">EcoMart</span></h1>
+            <p class="tagline">Sustainable shopping for a better tomorrow</p>
+        </header>
+
+        <main>
+            <section class="about-section">
+                <h2 style="text-align:center;">Our Mission</h2>
+                <p>At EcoMart, we believe that sustainable living should be accessible, affordable, and easy for everyone. We curate a collection of eco-friendly products that help reduce environmental impact without compromising on quality or style. Our mission is to make green shopping the first choice for conscious consumers worldwide.</p>
+                
+                <p>Every product in our marketplace is carefully vetted for its environmental credentials, from sustainable sourcing and ethical manufacturing to recyclable packaging. We're more than just a store - we're a community dedicated to creating positive change through everyday choices.</p>
+            </section>
+
+            <section class="team-section">
+                <h2>Meet Our Team</h2>
+                <p class="team-description">Our dedicated team of sustainability enthusiasts works tirelessly to bring you the best eco-friendly products and information.</p>
+                 
+                <div class="team-grid">
+
+                <a href="./raunak.html" style="text-decoration: none;color: inherit;width: 1080px; height:200px;"> 
+                    <div class="team-member" data-member="raunak">
+                        <div class="member-photo">
+                            <img src="../assets/raunak.jpg" alt="Raunak">
+                            </div>
+                        <h3>Raunak Sharma</h3>
+                        <p class="member-role">Founder</p>
+                        <button class="view-bio-btn" data-member="raunak">View Bio</button>
+                    </div>
+                </a>
+
+                <a href="./prinsha.html" style="text-decoration: none;color: inherit;">
+                    <div class="team-member" data-member="prinsha">
+                        <div class="member-photo">
+                            <img src="../assets/prinsha.jpg" alt="Prinsha">
+                        </div>
+                        <h3>Prinsha Paudel</h3>
+                        <p class="member-role">Head Of Operations</p>
+                        <button class="view-bio-btn" data-member="prinsha">View Bio</button>
+                    </div>
+                </a>
+
+                <a href="./yunesh.html" style="text-decoration: none;color: inherit;">
+                    <div class="team-member" data-member="yunesh">
+                        <div class="member-photo">
+                            <img src="../assets/yunesh.jpg" alt="Yunesh">
+                        </div>
+                        <h3>Yunesh Rai</h3>
+                        <p class="member-role">Creative Director</p>
+                        <button class="view-bio-btn" data-member="yunesh">View Bio</button>
+                    </div>
+                </a>
+
+                <a href="./rikma.html" style="text-decoration: none;color: inherit;">
+                    <div class="team-member" data-member="rikma">
+                        <div class="member-photo">
+                            <img src="../assets/rikma..jpg" alt="Rikma">
+                        </div>
+                        <h3>Rikma Thapa</h3>
+                        <p class="member-role">Chief Officer</p>
+                        <button class="view-bio-btn" data-member="rikma">View Bio</button>
+                    </div>
+                </a>
+
+                <a href="./raghav.html" style="text-decoration: none;color: inherit;">
+                    <div class="team-member" data-member="raghav">
+                        <div class="member-photo">
+                            <img src="../assets/raghavv.jpeg" alt="Raghav">
+                        </div>
+                        <h3>Raghav Raj Panta</h3>
+                        <p class="member-role">Digital Marketing</p>
+                        <button class="view-bio-btn" data-member="raghav">View Bio</button>
+                    </div>
+                </a>
+                </div>
+            </section>
+            
+            <section class="values-section">
+                <h2>Our Core Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainability</h3>
+                        <p>We prioritize products and practices that minimize environmental impact.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Ethical Sourcing</h3>
+                        <p>All our partners adhere to fair labor practices and ethical production standards.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community</h3>
+                        <p>We believe in building a supportive network of eco-conscious individuals.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="values-section" style="text-align: center;">
+            <h2>Feedback Form</h2>
+            <section class="feedback-section">
+                <form id="feedbackForm" onsubmit="return validateForm(event)">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="4" class="form-control" placeholder="How can we improve?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Feedback</button>
+                </form>
+            </section>
+        </section>
+
+       <footer class="footer">
+      <p>©️ 2026 EcoMart. All rights reserved. Crafted with love for a greener Nepal 🌿</p>
+       </footer>
+ </div>
+<script src="../js/about.js"></script>
+</body>
+</html>

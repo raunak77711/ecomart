@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Raghav">
+  <title>Research | EcoMart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Updated Favicon Path -->
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d1a12; /* Deep dark green-black */
+      color: #e8f5e8; /* Light green-white text */
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+ .navbar {
+  background-color: #061a13;
+  padding: 24px 0;
+  border-bottom: 1px solid #1f4035;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+/* Logo */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9ccc65;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo-box img {
+  height: 42px;
+}
+
+/* Center Links */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+
+.nav-center a {
+  position: relative;
+  color: #dcefe4;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+
+/* NAV HOVER EFFECT */
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #9ccc65;
+  transition: width 0.3s ease;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+  width: 100%;
+}
+
+.nav-center a:hover {
+  color: #9ccc65;
+  transform:scale(1.1);
+}
+
+    /* Hero */
+    .research-hero {
+      padding: 180px 5% 120px;
+      text-align: center;
+      /* External image, no path change needed */
+      background: linear-gradient(rgba(13,26,18,0.75), rgba(13,26,18,0.75)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+    }
+
+    .research-hero h1 {
+      font-size: 60.8px;
+      color: #a8d5ba;
+      margin-bottom: 19.2px;
+    }
+
+    .subtitle {
+      font-size: 21.6px;
+      color: #c7d2c9;
+      max-width: 850px;
+      margin: 0 auto 40px;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    h2 {
+      font-size: 44.8px;
+      color: #a8d5ba;
+      margin: 80px 0 40px;
+      text-align: center;
+    }
+
+    /* Comparison Intro */
+    .intro-text {
+      font-size: 20px;
+      color: #c7d2c9;
+      max-width: 900px;
+      margin: 0 auto 64px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* Image Comparisons */
+    .image-comparison {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .image-box {
+      background: #1e3a2f;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      transition: transform 0.4s, box-shadow 0.4s;
+      overflow: hidden;
+    }
+
+    .image-box:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    }
+
+    .image-box h3 {
+      color: #4caf50;
+      margin-bottom: 16px;
+      font-size: 25.6px;
+      text-align: center;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* Comparison Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 64px 0;
+      background: #1e3a2f;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+
+    th, td {
+      padding: 22.4px 28.8px;
+      text-align: left;
+      border-bottom: 1px solid #2d5a3d;
+    }
+
+    th {
+      background: #2d5a3d;
+      color: #a8d5ba;
+      font-weight: 600;
+      font-size: 17.6px;
+    }
+
+    td {
+      color: #e8f5e8;
+      font-size: 16px;
+    }
+
+    tr:hover {
+      background: rgba(74,124,89,0.18);
+    }
+
+    /* Footer */
+    .footer {
+      background: #0d1a12;
+      color: #c7d2c9;
+      padding: 64px 5% 32px;
+      text-align: center;
+      border-top: 1px solid #2d5a3d;
+    }
+
+    .footer p {
+      font-size: 16px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-box">
+        <!-- Updated Logo Path -->
+        <img src="../assets/logo.png" alt="EcoMart">
+        <span>EcoMart</span>
+      </div>
+      <nav class="nav-center">
+        <a href="../index.html">Home</a>
+        <a href="./productpage.html">Products</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./research.html" class="active">Research</a>
+        <a href="./about.html">About Us</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="research-hero">
+    <h1>Research & Design Insights</h1>
+    <p class="subtitle">How we built EcoMart — inspired by the best, improved for Nepal and sustainability</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Intro Text -->
+    <p class="intro-text">
+      We studied leading sustainable e-commerce websites to create something even better. Below are real screenshots and comparison tables showing how our navigation bar, homepage, and product page were inspired — and improved — for a cleaner, calmer, and Nepal-focused experience.
+    </p>
+
+    <!-- Navigation Bar Comparison -->
+    <h2>Navigation Bar Comparison</h2>
+    <div class="image-comparison">
+      <div class="image-box">
+        <h3>Our Navigation Bar</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/ournav.jpeg" alt="EcoMart Navigation Bar">
+      </div>
+      <div class="image-box">
+        <h3>Reference Navigation Bar</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/refnav.jpeg" alt="Tentree Navigation Bar">
+      </div>
+    </div>
+    <p style="text-align:center; font-size:17.6px; color:#c7d2c9; margin:32px 0;">
+      After researching popular sustainable e-commerce websites, we designed our navigation bar to be simple, clean, and user-friendly. We took inspiration from well-known eco-brands like Patagonia, and Allbirds, which have a dark horizontal bar with the logo on the center. We liked this layout because it is easy to understand and works well on both desktop and mobile. Our navigation bar follows the same structure but we made it even better by using a softer dark green color, adding an active link underline (in green), and making it sticky so it stays at the top when scrolling. This makes navigation faster and more comfortable for users while keeping the calm, nature-inspired feel of EcoMart. The final result is modern, professional, and perfectly matches our sustainable brand identity.
+    </p>
+
+    <!-- Homepage Comparison -->
+    <h2>Homepage Comparison</h2>
+    <div class="image-comparison">
+      <div class="image-box">
+        <h3>Our Homepage</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/Ourhome.png" alt="EcoMart Homepage">
+      </div>
+      <div class="image-box">
+        <h3>Reference Homepage</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/refhome.jpeg" alt="Tentree Homepage">
+      </div>
+    </div>
+    <p style="text-align:center; font-size:17.6px; color:#c7d2c9; margin:32px 0;">
+    After researching successful sustainable e-commerce websites, our team took strong inspiration from Tentree for the homepage design. Tentree has a clean, dark green horizontal navigation bar with the logo on the left, simple menu links in the center, and search/cart icons on the right a layout that is easy to use and looks professional. We liked how it stays fixed (sticky) when scrolling, so users can always navigate quickly. For the homepage, Tentree uses a full-screen nature background with a bold eco-message (“Every Item Plants 10 Trees”) and clear call-to-action buttons. We used these ideas as a base but improved them for EcoMart: we chose a softer green color for the nav bar, added an active link underline for better feedback, and made the homepage hero calmer with more white space, a personal founder story, and our own tree-planting promise (“One Purchase = One Tree”). This made our design feel warmer, more Nepal-focused, and easier on the eyes while keeping the same professional and sustainable vibe.
+    </p>
+
+    <!-- Product Page Comparison -->
+    <h2>Product Page Comparison</h2>
+    <div class="image-comparison">
+      <div class="image-box">
+        <h3>Our Product Page</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/ecoprod.png" alt="EcoMart Product Page">
+      </div>
+      <div class="image-box">
+        <h3>Reference Product Page</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/refrenceprod.jpeg" alt="Allbirds Product Page">
+      </div>
+    </div>
+    <p style="text-align:center; font-size:17.6px; color:#c7d2c9; margin:32px 0;">
+    After researching popular sustainable e-commerce websites, we found a beautiful product page design that inspired our own layout. The reference website (bloom.com) uses a clean grid of product cards with discount badges in circles, short descriptions, prices, and “Add to Cart” buttons — all with a soft green background and nature elements. We loved how it feels calm, modern, and focused on the products themselves. We took these ideas for EcoMart’s Product Page: a responsive grid of cards with images, sale badges, descriptions, sizes, and hover effects to make shopping engaging. We improved it by adding more breathing space, emoji in descriptions, and our unique Nepal-focused green theme. This makes our product page easier to read, less cluttered, and more inviting for conscious buyers while keeping the professional look of the reference site.
+    </p>
+
+    <!-- Blog Page Comparison -->
+    <h2>Blog Page</h2>
+    <div class="image-comparison">
+      <div class="image-box">
+        <h3>Our Blog Page</h3>
+        <!-- Updated Image Path -->
+        <img src="../assets/ourblog.png" alt="EcoMart Blog Page">
+      </div>
+    </div>
+    <p style="text-align:center; font-size:17.6px; color:#c7d2c9; margin:32px 0;">
+    For the Blog page, we researched successful and popular blogs from the article “50+ Best Examples of Popular Blogs in 2024” on <a href="https://firstsiteguide.com/examples-of-blogs/" style="text-decoration: underline;color:inherit" target="_blank">(firstGuide.com)</a>.
+    We studied lifestyle, eco, and sustainable blogs like Ecomart and Sustainable development clean layout, easy-to-read articles, beautiful images, and simple navigation. We took these ideas and created our own Blog page for EcoMart a clean, minimal design with a dark green theme, big readable headings, short summaries. We made it better by focusing on sustainability topics (eco-tips, material stories, green living in Nepal). This keeps the blog consistent with EcoMart’s calm and trustworthy look while educating users about sustainable choices.
+    </p>
+
+    <!-- Comparison Table (All Aspects) -->
+    <h2>Overall Design Comparison Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Inspired Website (Tentree / Allbirds)</th>
+          <th>Our Website (EcoMart)</th>
+          <th>Similarities</th>
+          <th>Our Improvements</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Navigation Bar</td>
+          <td>Horizontal, dark, logo left, links center, icons right</td>
+          <td>Horizontal, dark green, sticky with blur effect</td>
+          <td>Structure & placement</td>
+          <td>Softer green tones, active underline, Nepal-inspired</td>
+        </tr>
+        <tr>
+          <td>Homepage Hero</td>
+          <td>Dark nature background, big image, bold eco-message</td>
+          <td>Gradient overlay, personal founder story, tree promise</td>
+          <td>Big nature image & eco-focus</td>
+          <td>Calmer colors, more space, Nepal connection</td>
+        </tr>
+        <tr>
+          <td>Product Page Layout</td>
+          <td>Grid-based, product-focused</td>
+          <td>Responsive grid with hover lift & zoom</td>
+          <td>Grid layout</td>
+          <td>More white space, less clutter, size info & emoji descriptions</td>
+        </tr>
+        <tr>
+          <td>Color Scheme</td>
+          <td>Dark forest green, natural tones</td>
+          <td>Earthy green gradient with white text</td>
+          <td>Green/nature theme</td>
+          <td>Softer & less eye strain, Nepal-inspired palette</td>
+        </tr>
+        <tr>
+          <td>Footer</td>
+          <td>Simple links & copyright</td>
+          <td>Centered title, 3 feature icons, SHOP NOW button</td>
+          <td>Basic links</td>
+          <td>Added impact features (Organic, Zero Waste, Carbon Neutral)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>©️ 2026 EcoMart. All rights reserved. Crafted with love for a greener Nepal 🌿</p>
+  </footer>
+
+</body>
+</html>

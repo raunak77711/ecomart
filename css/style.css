@@ -1,0 +1,176 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+ font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    
+    color: #dcefe4;
+    background-image: url('../assets/high-angle-shot-beautiful-tropical-jungle-full-trees.jpg');
+
+}
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 10px; /* Space between login and signup */
+}
+
+.login-btn {
+    background-color: #555;
+}
+.signup-btn {
+    background-color: #555; /* Example blue color */
+}
+/* NAVBAR */
+.navbar {
+  background-color: #061a13;
+  padding: 24px 0;
+  border-bottom: 1px solid #1f4035; 
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+/* LOGO */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9ccc65;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo-box img {
+  height: 42px;
+}
+
+/* CENTER NAV */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+
+.nav-center a {
+  position: relative;
+  color: #dcefe4;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+
+/* NAV HOVER EFFECT */
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #9ccc65;
+  transition: width 0.3s ease;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+  width: 100%;
+}
+
+.nav-center a:hover {
+  color: #9ccc65;
+}
+
+/* HERO */
+.hero {
+  max-width: 1200px;
+  margin: 80px auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.badge {
+  background: #1f4035;
+  color: #b7e4c7;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #f1fff8;
+}
+
+.hero-text span {
+  color: #9ccc65;
+}
+
+.hero-para {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #cfe8db;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+/* PROMISE */
+.promise {
+  background-color: #102a21;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.promise-box {
+  max-width: 1050px;
+  margin: 50px auto 0;
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+
+.promise-item {
+  background: #0b1f17;
+  padding: 38px;
+  border-radius: 20px;
+  width: 270px;
+  border: 1px solid #1f4035;
+}
+
+.promise-item h3 {
+  margin: 18px 0;
+  font-weight: 600;
+  color: #9ccc65;
+}
+

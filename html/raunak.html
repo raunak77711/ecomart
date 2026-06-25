@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio | Raunak Sharma</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+    <style>
+        /*Internal CSS for Portfolio Page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    
+    background-image: url(../assets/high-angle-shot-beautiful-tropical-jungle-full-trees.jpg);
+}
+.main{
+    background: rgb(78, 117, 100);
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.profile-card {
+    background: #1b3a2f;
+    padding: 32px 24px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-img {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 19.2px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(0, 0, 0, 0.05);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+}
+
+.profile-card p {
+    color: #94a3b8;
+}
+
+.contact-info, .languages {
+    background: #1b3a2f;
+    padding: 28.8px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3, .languages h3 {
+    margin-bottom: 19.2px;
+    color: #f3f4f6;
+}
+
+.contact-info p, .languages p {
+    margin: 11.2px 0;
+    color: #cbd5e1;
+}
+
+.contact-info i {
+    margin-right: 12.8px;
+    color: #f5f6f8;
+    width: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+h1 {
+    color: #d9dadc;
+    font-size: 41px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    color: #f5f6f8;
+    font-size: 30px;
+    margin-bottom: 19px;
+    border-left: 4px solid #f6f8f9;
+    padding-left: 16px;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skills-tags span {
+    background: #1b3a2f;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: #e2e8f0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.skills-tags span:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+.edu-item, .project-item {
+  background: #1b3a2f;
+  padding: 26px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.period {
+  color: #eaecef;
+  font-size: 15px;
+  margin: 6px 0 13px;
+}
+
+
+/* NAVBAR */
+.navbar {
+  background-color: #061a13;
+  padding: 24px 0;
+  border-bottom: 1px solid #1f4035;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+/* LOGO */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #9ccc65;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.logo-box img {
+  height: 42px;
+}
+
+/* CENTER NAV */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+}
+
+.nav-center a {
+  position: relative;
+  color: #dcefe4;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+
+/* NAV HOVER EFFECT */
+.nav-center a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #9ccc65;
+  transition: width 0.3s ease;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+  width: 100%;
+}
+
+.nav-center a:hover {
+  color: #9ccc65;
+  transform:scale(1.1);
+}
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-container">
+      <div class="logo-box">
+        <!-- Updated Logo Path -->
+        <img src="../assets/logo.png" alt="EcoMart Logo">
+        <span>EcoMart</span>
+      </div>
+      <nav class="nav-center">
+        <a href="../index.html" >Home</a>
+        <a href="./productpage.html">Products</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./research.html">Research</a>
+        <a href="./about.html" class="active">About Us</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- SEND BACK TO ABOUT US PAGE-->
+<button onclick="window.location.href='about.html';" style="padding:3px;border:none;position:absolute;top:101px;left:200px;cursor: pointer;background-color:#061a13;color:white;;font-size:16px;font-family:'Poppins',sans-serif;transform: scale(1.1);border-radius: 5px;"><b>⬅️Go Back To Previous Page</b></button>
+
+
+<div class="main">
+    <main class="container">
+
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-img">
+                    <!-- Updated Image Path -->
+                    <img src="../assets/raunak.jpg" alt="Raunak">
+                </div>
+                <h2>Raunak<br>Sharma</h2>
+                <p>Student at Islington College</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> raunak.sharma@email.com</p>
+                <p><i class="fas fa-phone"></i> +977 9828820867</p>
+                <p><i class="fas fa-map-marker-alt"></i> Nepal</p>
+            </div>
+
+            <div class="languages">
+                <h3>Languages</h3>
+                <p>English</p>
+                <p>Nepali</p>
+            </div>
+        </aside>
+
+        <section class="content">
+            <div class="about-section">
+                <h1>About Me</h1>
+                <p>
+                    I am Raunak Sharma, a passionate student developer and founder of EcoMart — an e-commerce platform dedicated to sustainable, eco-friendly products handcrafted in Nepal. Currently pursuing my studies in Computer Science, I am deeply interested in Artificial Intelligence, web development, clean user interfaces, and technology that creates positive real-world impact.
+                </p>
+            </div>
+
+            <div class="skills-section">
+                <h2>Skills</h2>
+                <div class="skills-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Git & GitHub</span>
+                    <span>Basic AI / ML</span>
+                </div>
+            </div>
+
+            <div class="education-section">
+                <h2>Education</h2>
+                <div class="edu-item">
+                    <h3>Bachelor in Computing And Artificial Intelligence</h3>
+                    <p class="period">2025 – Present</p>
+                    <p>Focused on web technologies, front-end development, sustainable digital solutions, and ethical AI fundamentals.</p>
+                </div>
+            </div>
+
+            <div class="projects-section">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <h3>Team Website</h3>
+                    <p>EcoMart – Sustainable E-Commerce Website</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+</body>
+</html>
